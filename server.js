@@ -5,7 +5,7 @@ var server = prerender();
 
 if (!server.options.omitPrerenderHeader) {
   // Doing this for localhost requests causes CORS errors.
-  // server.use(prerender.sendPrerenderHeader());
+  server.use(prerender.sendPrerenderHeader());
 }
 
 // server.use(prerender.blockResources());
